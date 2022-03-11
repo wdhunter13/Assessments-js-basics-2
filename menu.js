@@ -31,8 +31,9 @@
 */
 
 //CODE HERE
+const pizza = {name:"Hunter", price: 10, catagory:"Italian", popularity: 100, rating: 10, tags: ["Clean", "Italian", "10/10"]}
 
-
+console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +44,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +54,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +65,7 @@
 */
 
 //CODE HERE
+console.log
 
 
 /*

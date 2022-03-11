@@ -20,6 +20,15 @@
 */
 
 //CODE HERE
+class Employee {
+    constructor(name, shifts) {
+        this.name = "Hunter"
+        this.shifts = "Monday"
+    } 
+    getSchedule() {
+        return `${this.name} works on ${this.shifts}`
+    }
+}
 
 
 
