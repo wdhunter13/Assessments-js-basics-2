@@ -35,13 +35,9 @@ const cart = [
 
 //CODE HERE
 
-function getSum(total, num) {
-    cart.reduce(getSum, 0)
-    return total + num
-}
-
-const summedPrice = cart.reduce(getSum)
-
+const summedPrice = cart.reduce((acc, cv) => {
+return acc + cv.price
+},0)
 console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -59,10 +55,10 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-function calcFinalPrice(cartTotal, couponValue, tax) 
-const calcFinalPrice = cart.map(cart => order.price + (order.price * order.tax))
-
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+return (cartTotal * tax) * cartTotal - couponValue
+}
+console.log(calcFinalPrice(20,6,12,1))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -85,7 +81,11 @@ const calcFinalPrice = cart.map(cart => order.price + (order.price * order.tax))
 
 /*
     TEXT ANSWER HERE
-
+    
+    name: The name of the order 
+    order: The food they request
+    price: The amount of money the order is
+    time: How long until the food is ready
 */
 
 /*
@@ -94,3 +94,25 @@ const calcFinalPrice = cart.map(cart => order.price + (order.price * order.tax))
 */
 
 //CODE HERE
+const customerObj = [
+    {
+        name: 'hunter', 
+        price: 9.99,
+        order: `pizza`,
+        time: `quick`
+    }, 
+    {
+        name: 'wade', 
+        price: 8.99,
+        order: `salad`,
+        time: `quick`
+    }, 
+    {
+        name: 'hunter', 
+        price: 7.99,
+        order: `steak`,
+        time: `long`
+
+    }
+]
+console.log(customerObj)

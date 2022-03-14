@@ -65,7 +65,8 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-console.log
+const {price} = pizza
+console.log(price)
 
 
 /*
@@ -76,6 +77,9 @@ console.log
 */
 
 //CODE HERE
+
+const {catagory} = pizza
+console.log(catagory)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -91,9 +95,20 @@ console.log
 */
 
 //CODE HERE
+let foodArr = [
+ {name:"Cheese Pizza", price: 10, catagory:"Italian", popularity: 10, rating: 10, tags: ["Quick", "Italian", "10/10"]}
+,
+ {name:"Pepperoni Pizza", price: 20, catagory:"Italian", popularity: 20, rating: 20, tags: ["Perfect", "Italian", "10/10"]}
+,
+{name:"Spicy Pizza", price: 30, catagory:"Italian", popularity: 30, rating: 30, tags: ["Spicy", "Italian", "10/10"]}
+,
+{name:"Sweet Pizza", price: 40, catagory:"Italian", popularity: 40, rating: 40, tags: ["Sweet", "Italian", "10/10"]}
+,
+{name:"House Salad", price: 50, catagory:"Italian", popularity: 50, rating: 50, tags: ["Great Side", "Italian", "10/10"]}
 
+]
 
-
+console.log(foodArr)
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
@@ -108,8 +123,8 @@ console.log
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(item => item.tags.includes(`Quick`))
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -152,13 +167,24 @@ console.log
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(item => {
+        if(type === `above`) {
+            return item[property] > number 
+        } else {
+            return item[property] < number
+        }
+    })
+    return filteredArr
+}
 
 
 /*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+Invoke the `filterByProperty` function passing
+in a value for each paramter.
 
-    You'll have to console.log to see the filtered array
+You'll have to console.log to see the filtered array
 */
 
 //CODE HERE
+console.log(filterByProperty(price,10,`above`))

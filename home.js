@@ -23,13 +23,9 @@
 
 //CODE HERE
 
-function greetUser (username) {
-    console.log(username)
-}
+const greetUser = username => `Welcome back, ${username}`
 
-greetUser("Welcome back, Hunter")
-
-
+console.log(greetUser("Hunter"))
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -129,7 +125,8 @@ const deals = [
 */
 
 //CODE HERE
-console.log(deals.replace(`15%, 10%`))
+deals[0].title = deals[0].title.replace(`15`, `10`)
+console.log(deals)
 
 
 /*
@@ -146,3 +143,6 @@ console.log(deals.replace(`15%, 10%`))
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace(`March!`, `April!`).trim()
+console.log(deals)
